@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
+
   def index
-  end  
+    @jobs = Job.all
+  end
+
 
 end
