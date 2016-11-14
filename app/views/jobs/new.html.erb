@@ -15,8 +15,8 @@
     <%= f.text_field :category %>
 </p>
 <p>
-    <%= f.label :company, 'Empresa:' %>
-    <%= f.text_field :company %>
+    <%= f.label :company_id, 'Empresa:' %>
+    <%= f.collection_select :company_id, Company.all, :id, :name %>
 </p>
 <p>
     <%= f.label :description, 'Descrição:' %>
