@@ -1,18 +1,21 @@
 <h1><%= @company.name %></h1>
 
+
+<% if @company.premium? %>
+<%= image_tag 'estrela.png' %>
+<% end %>
+
 <p><%= @company.location %></p>
 <p><%= @company.mail %></p>
 <p><%= @company.phone %></p>
 
-
 <% if @company.jobs.empty? %>
   <%= flash[:notice] = 'Nenhuma vaga disponível' %>
   <% else %>
-  <% @company.jobs.each do |job| %>
-  <p><%= job.title %></p>
-  <p><%= job.category.name %></p>
-  <% end %>
+    <% @company.jobs.each do |job| %>
+    <p><%= job.title %></p>
+    <p><%= job.category.name %></p>
+    <% end %>
 <% end %>
-
 
 <p><%= link_to 'Voltar', root_path %></p>
