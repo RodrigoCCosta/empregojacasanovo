@@ -10,7 +10,7 @@
   <% else %>
   <% @company.jobs.each do |job| %>
   <p><%= job.title %></p>
-  <p><%= job.category %></p>
+  <p><%= job.category.name %></p>
   <% end %>
 <% end %>
 
