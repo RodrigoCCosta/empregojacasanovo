@@ -11,7 +11,12 @@
 
 
 <h2>Empresas</h2>
-
 <% @companies.each do |company| %>
-  <p><%= link_to company.name, company %></p> 
+  <p><%= link_to company.name, company %></p>
+<% end %>
+
+
+<h2>Categorias</h2>
+<% @categories.each do |category| %>
+  <p><%= link_to category.name, category %></p>
 <% end %>
