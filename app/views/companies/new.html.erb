@@ -1,25 +1,2 @@
-<%= form_for @company do |f| %>
-
-<p>
-    <%= f.label :name, 'Nome:' %>
-    <%= f.text_field :name %>
-</p>
-<p>
-    <%= f.label :location, 'Local:' %>
-    <%= f.text_field :location %>
-</p>
-<p>
-    <%= f.label :mail, 'Email:' %>
-    <%= f.text_field :mail %>
-</p>
-<p>
-    <%= f.label :phone, 'Telefone:' %>
-    <%= f.text_area :phone %>
-</p>
-<p>
-    <%= f.submit 'Criar Empresa' %>
-</p> 
-
-<p><%= link_to 'Voltar', root_path %></p>
-
-<% end %>
+<h1>Crir Empresa</h1>
+<%= render :partial => 'form', :locals => {:botao => 'Criar Empresa'} %>
