@@ -7,7 +7,10 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     if @job.save
-      redirect_to @job
+      redirect_to job_url(@job)
+    else
+      flash[:alert] = 'Não foi possível criar a vaga'
+      render :new
     end
   end
 
@@ -16,7 +19,7 @@ class JobsController < ApplicationController
   end
 
   def job_params
-    params.require(:job).permit(:title, :category, :company_id, :description, :location, :featured)
+    params.require(:job).permit(:title, :location, :category, :company_id, :description,  :featured)
   end
 
 end
