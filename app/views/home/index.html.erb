@@ -8,3 +8,10 @@
     <strong>Destaque</strong>
   <% end %>
 <% end %>
+
+
+<h2>Empresas</h2>
+
+<% @companies.each do |company| %>
+  <p><%= link_to company.name, company %></p> 
+<% end %>
