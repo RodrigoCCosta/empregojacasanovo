@@ -12,11 +12,17 @@
        <strong>Destaque</strong>
     <% end %>
 
-  <% else %>
+
+  <% elsif %>
       <%= flash[:alert] = 'Não foi possível criar a vaga' %>
       <%= render :new %>
 
+  <% else %>
+      <%= flash[:alert] = 'Não foi possível atualizar a vaga' %>
+      <%= render :edit %>
+
 <% end %>
 
+<p><%= link_to 'Editar', edit_job_path %></p>
 
 <p><%= link_to 'Voltar', root_path %></p>
