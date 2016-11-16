@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :jobs, only: [:create, :show, :new, :edit, :update]
   resources :companies, only: [:create, :show, :new, :edit, :update]
-  resources :categories, only: [:create, :show, :new]
+  resources :categories, only: [:create, :show, :new, :edit, :update]
 end

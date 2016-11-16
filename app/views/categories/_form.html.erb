@@ -1,0 +1,12 @@
+<%= form_for @category do |f| %>
+
+<p>
+    <%= f.label :name, 'Nome:' %>
+    <%= f.text_field :name %>
+</p>
+    <%= f.submit botao %>
+</p>
+
+<p><%= link_to 'Voltar', root_path %></p>
+
+<% end %>
