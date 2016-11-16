@@ -1,5 +1,11 @@
 <% if @job.valid? %>
 
+
+  <% if :expired? %>
+    <h2>Vaga Expirada</h2>
+  <% end %>
+
+
   <h1><%= @job.title %></h1>
 
   <p><%= @job.category.name %></p>

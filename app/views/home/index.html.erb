@@ -1,22 +1,26 @@
 <h1>Emprego Já</h1>
 
+
 <% @jobs.each do |job| %>
+<% if job.expired? %>
+  <%  %>
   <h1><%= link_to job.title, job %></h1>
   <p><%= job.company.name %></p>
   <p><%= job.location %></p>
-  <% if job.featured %>
+    <% if job.featured %>
     <strong>Destaque</strong>
+    <% end %>
   <% end %>
 <% end %>
 
 
-<h2>Empresas</h2>
-<% @companies.each do |company| %>
-  <p><%= link_to company.name, company %></p>
-<% end %>
+  <h2>Empresas</h2>
+  <% @companies.each do |company| %>
+    <p><%= link_to company.name, company %></p>
+  <% end %>
 
 
-<h2>Categorias</h2>
-<% @categories.each do |category| %>
-  <p><%= link_to category.name, category %></p>
-<% end %>
+  <h2>Categorias</h2>
+  <% @categories.each do |category| %>
+    <p><%= link_to category.name, category %></p>
+  <% end %>
